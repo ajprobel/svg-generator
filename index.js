@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const Shapes = require('./lib/shapes.js');
 
+// Defining questions to be used in Inquirer
 const questions = [
     {
         type: 'input',
@@ -26,16 +27,21 @@ const questions = [
 
 ];
 
+// Main logic - calls Inquirer and then passes the data to be used for SVG creation
 const generateSVG = () => {
     inquirer
         .prompt(questions)
         .then((response) => {
             console.log(response);
+            // Deconstructing the information in the response
             const { text, textColor, shape, shapeColor } = response;
+            // Checks to make sure user has only input 3 or less characters
             if (text.length > 3) {
                 console.log("\nPlease enter a character length that is EQUAL TO or LESS THAN 3\n");
                 generateSVG();
             } else {
+                // Switch to handle the chosen shape
+                // Creates a new object with the proper class. Passes deconstructed data as arguments.
                 switch (shape) {
                     case 'Circle':
                         const newCircle = new Shapes.Circle(shapeColor, text, textColor);
@@ -55,4 +61,5 @@ const generateSVG = () => {
         })
 }
 
+// Run program
 generateSVG();
