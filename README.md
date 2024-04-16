@@ -14,7 +14,7 @@ Clone the repository and make sure that you have Node.js installed, as well as t
 
 ## Usage
 
-Please watch [this video](https://www.youtube.com/) to get a walkthrough of the application, in addition to the steps below.
+Please watch [this video](https://drive.google.com/file/d/1BtrCTVykNS7aQeOLmHNybDOYbQd4TtAA/view?usp=sharing) to get a walkthrough of the application, in addition to the steps below.
 
 After cloning the repository and installing any dependencies:
 
